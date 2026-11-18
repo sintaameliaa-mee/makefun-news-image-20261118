@@ -1,10 +1,18 @@
 #!/usr/bin/env python3
-"""news-image-20261118 entry: copy the pre-rendered image to the output dir.
+"""news-image-20261118 entry (v2): copy the pre-rendered image to the output dir.
 
-The image (entry.png) is a 1024x1024 infographic summing up the world news
-of Wednesday 18 November 2026. The program writes it to /output/entry.png
-(or $MAKEFUN_OUTPUT_DIR/entry.png when set), byte for byte, so both runs
+The image (entry.png) is a 1024x1024 newspaper front page summing up the
+world news of Wednesday 18 November 2026: 44 stories, verified against
+reporting from that day, with a masthead, big-numbers strip, 3 large
+illustrated stories, 10 illustrated cards, a world map with numbered pins,
+and a numbered list of the remaining stories.
+
+The program writes the image to /output/entry.png (or
+$MAKEFUN_OUTPUT_DIR/entry.png when set), byte for byte, so both runs
 produce identical output. Standard library only, no network.
+
+The image itself is rendered by draw.py (Pillow, build-time only), kept in
+this repo for transparency and reproducibility.
 """
 
 import os
